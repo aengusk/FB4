@@ -25,7 +25,7 @@ if(file.exists(parm_File)){
 }
 
 # Design file
-#Design_File = "FB4_Design_Example_1.csv"     # Design file for Example 1
+Design_File = "FB4_Design_Example_1.csv"     # Design file for Example 1
 #Design_File = "FB4_Design_Example_5.csv"     # Design file for Example 5; ~2 seconds for 2 runs
 #Design_File = "FB4_Design_Examples_1-4.csv"  # Design file for Examples 1-4; ~26 seconds for all runs
 #Design_File = "FB4_Design_Bluegill_Thermoregulation.csv"  # Example using behavioral thermoregulation
@@ -67,7 +67,7 @@ shinyServer(function(input, output,session) {
   
   Model <- reactive({
 
-    UseDesignFile <- FALSE # TRUE # ## Did user specify a Design file?
+    UseDesignFile <- TRUE # ## Did user specify a Design file?
     
     Design.time.Start <- proc.time() # start clock to time all Design_File runs
     
